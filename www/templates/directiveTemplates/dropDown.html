@@ -1,0 +1,23 @@
+<ul class="list dropdown-main" ng-if="showDropdownMenu" on-swipe-up="onSwipeUp()">
+
+  <li class="item item-icon-left dropdown">
+
+  </li>
+
+  <li class="item item-icon-left dropdown" nav-transition="ios" nav-direction="forward" ng-click="doSomething()">
+    <i class="icon ion-person dropdown-inner">главный</i>
+  </li>
+
+  <li class="item item-icon-left dropdown" nav-transition="ios" nav-direction="forward" ng-click="goToSettings()">
+    <i class="icon ion-settings dropdown-inner">настройки</i>
+  </li>
+
+  <li class="item item-icon-left dropdown" nav-transition="ios" nav-direction="back" ng-click="goToLoginPage()">
+    <i class="icon fa fa-sign-out dropdown-inner">Logout</i>
+  </li>
+
+  <li class="item item-icon-right dropdown" ng-click="hideDropdown()">
+    <i class="icon ion-close-round dropdown-inner"></i>
+  </li>
+
+</ul>

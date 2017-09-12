@@ -1,0 +1,52 @@
+<ion-view hide-nav-bar="true" data-tap-disabled="true">
+
+  <ion-scroll has-bouncing="false" ng-class="'content-background'">
+
+  <div class="row padding-top">
+    <div class="col text-center padding-top">
+      <h3 class="text-white padding-top">вход</h3>
+    </div>
+  </div>
+
+    <form name="signinForm" class="form-margin" ng-model-options="{updateOn: 'keyup'}" ng-submit="login(signinForm, loginPhone, loginPassword)" novalidate>
+
+      <div class="list form-list">
+        <label class="item item-input form-inputs">
+          <span class="input-label">Phone</span>
+          <span class="seven">(+7) </span>
+          <input type="tel" name="loginPhone" placeholder=" xxx-xxx-xxxx" class="phone-number-ios text-input-field number-input" ng-model="loginPhone" ng-model-options="{updateOn: 'keyup', allowInvalid: true}" ng-change="updatePhoneModel(signinForm, loginPhone)" mask=" 999-999-9999" clean="true" required>
+        </label>
+
+        <label class="item item-input form-inputs">
+          <span class="input-label">пароль</span>
+          <input type="text" name="loginPassword" class="text-input-field number-input"  ng-model="loginPassword" ng-model-options="{updateOn: 'keyup', allowInvalid: true}" ng-change="updatePasswordModel(signinForm, loginPassword)" required>
+        </label>
+      </div>
+
+<br>
+
+    <div class="row">
+      <div class="col text-center">
+          <button type="submit" on-touch="onTouch()" on-release="onRelease()" id="buttonLogin" class="button button-light button-outline form-main-button">войти</button>
+      </div>
+    </div>
+
+  </form>
+
+  <div class="row">
+    <div class="col text-center">
+      <h4 class="text-white-light">Or login with</h4>
+    </div>
+  </div>
+
+  <o-auth class="o-auth"></o-auth>
+
+  <div class="row">
+    <div class="col text-center">
+      <button class="button button-clear button-light" nav-transition="ios" nav-direction="forward" ui-sref="signup">ещё нет аккаунта?</button>
+      <button class="button button-clear button-light" nav-transition="ios" nav-direction="forward" ui-sref="forgot">Забыли пароль</button>
+    </div>
+  </div>
+
+</ion-scroll>
+</ion-view>

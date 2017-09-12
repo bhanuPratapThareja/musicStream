@@ -1,0 +1,16 @@
+
+<div class="scrollmenu">
+  <h5 style="margin-left:20px;">Recently Visted</h5>
+  <ion-scroll direction="x" scrollbar-x="false" style="margin-top:-10px;">
+  <div class="row" style="border:none;">
+
+    <ul class="list list-no-border" style="height:50px;" ng-repeat="playlist in recentPlaylists">
+      <li class="item border-none recent-playlist-width">
+      <img ng-src="{{playlist.img}}" class="video-image">
+      </li>
+    </ul>
+
+  </div>
+
+</ion-scroll>
+</div>

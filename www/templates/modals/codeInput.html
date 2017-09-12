@@ -1,0 +1,47 @@
+<ion-modal-view class="modal-code-input">
+  <ion-content has-bouncing="false" data-tap-disabled="true">
+
+    <div class="row">
+      <div class="col text-center" style="margin-top:10%;">
+        A code is send to you by sms. Please enter the code to verify.
+      </div>
+    </div>
+
+    <hr class="horizontal-line">
+
+    <form name="smsCodeForm" ng-submit="getSmsCodeFromUser(test1, test2, test3, test4);">
+
+
+      <div class="row">
+        <div class="col text-center">
+          <input type="text" class="smsBox" id="id1"ng-model="test1" maxlength="1" auto-next />
+          <input type="text" class="smsBox"  id="id2" ng-model="test2" maxlength="1" auto-next/>
+
+        </div>
+      </div>
+
+      <br><br>
+      <br><br>
+
+
+      <div class="row">
+        <div class="col text-center">
+          <button type="submit" class="button button-positive button-clear sms-code-button" ng-disabled="smsCodeProvided">Send Code</button>
+        </div>
+      </div>
+
+
+    </form>
+
+    <div class="col text-center">
+      <button class="button button-positive button-clear icon ion-close sms-code-button-close" ng-click="closeInputModal()" ng-disabled="smsCodeProvided"></button>
+    </div>
+
+    <div class="row code-spinner-div" ng-if="codeSpinner">
+      <div class="col text-center">
+        <ion-spinner class="code-spinner" icon="android"></ion-spinner>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

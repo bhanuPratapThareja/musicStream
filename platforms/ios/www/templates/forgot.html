@@ -1,0 +1,41 @@
+<ion-view hide-nav-bar="true" data-tap-disabled="true">
+
+   <ion-scroll overflow-y="hidden" scroll="false" ng-class="'content-background'">
+<br><br>
+     <div class="row padding-top">
+       <div class="col text-center padding-top">
+         <h3 class="text-white padding-top">Забыли пароль?</h3>
+       </div>
+     </div>
+
+     <br><br>
+
+     <form name="forgotPasswordForm" class="form-margin" ng-submit="forgotPassword(forgotPasswordForm, forgotPhone)" novalidate>
+
+       <div class="list form-list">
+         <label class="item item-input form-inputs">
+           <span class="input-label">Phone</span>
+           <span class="seven">(+7) </span>
+           <input type="tel" name="forgotPhone" placeholder=" xxx-xxx-xxxx" class="phone-number-ios text-input-field number-input" ng-model="forgotPhone" ng-model-options="{updateOn: 'keyup', allowInvalid: true}" ng-change="updatePhoneModel(forgotPasswordForm, forgotPhone)" mask=" 999-999-9999" clean="true" required>
+         </label>
+       </div>
+
+       <br>
+
+       <div class="row">
+         <div class="col text-center">
+           <button type="submit" on-touch="onTouch()" on-release="onRelease()" id="buttonForgot" class="button button-light button-outline button-block form-main-button">get password</button>
+         </div>
+       </div>
+
+     </form>
+
+     <div class="row">
+       <div class="col text-center">
+         <button class="button button-clear button-light icon-left ion-chevron-left" nav-transition="ios" nav-direction="back" ui-sref="signin"> &nbsp;&nbsp;Перейти войти в страницу</button>
+       </div>
+     </div>
+
+		</ion-scroll>
+
+</ion-view>

@@ -1,0 +1,146 @@
+<ion-view style="" class=" " id="playmusic" title="playmusic" hide-nav-bar="true" ng-controller="pakkaUICtrl">
+	<ion-header-bar class="pakka-theme-bg-color border-none backgroundnone">
+		<button class="button button-clear button-icon icon ion-ios-arrow-back" ui-sref="home"></button>
+		<div class="pakka-nav-head"><h1>Play Music</h1></div>
+		<button class="pakka-nav-icon pakka-share button-clear"></button>
+		<button class="pakka-nav-icon pakka-like button-clear" ng-click="notification.show($event)"></button>
+		<button class="pakka-nav-icon pakka-more button-clear" ng-click="more.show()"></button>
+	</ion-header-bar>
+	<div class="pakka-main-wrap">
+		<div class="pakka-song-play-div-wrap">
+			<div class="pakka-song-play-div">
+				<div class="pakka-song-play-div-overlay">
+					<h6>LUCY DATE KESHA All time hits 2016</h6>
+				</div>
+					<img src="img/editor10.png">
+				<div class="pakka-play-btn-bay">
+					<button class="pakka-left" ng-click="player.show()"><p>PLAY ALL</p>
+						<div class="pakka-play-l"></div>
+					</button>
+					<button class="pakka-right"><p>DOWNLOAD ALL</p>
+						<div class="pakka-play-r"></div>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <ion-content class="pakka-theme" style="top: 51%;">
+		<div class="pakka-main-wrap">
+			<div class="pakka-mymusic-wrap">
+				<div class="pakka-song-list">
+					<ul>
+						<li>
+						<div class="pakka-music-album">
+							<img src="img/editor11.png">
+						</div>
+						<div class="pakka-music-title">
+							<h6>LUCY DATE All time KESHA hits</h6>
+							<div class="pakka-btn-bay">
+								<div class="pakka-more1" ng-click="more.show()"></div>
+								<div class="pakka-dwn1"></div>
+								<div class="pakka-play1" ng-click="player.show()"></div>
+								<div class="clear-both"></div>
+							</div>
+						</div>
+						<div class="clear-both"></div>
+						</li>
+						<li>
+						<div class="pakka-music-album">
+							<img src="img/editor11.png">
+						</div>
+						<div class="pakka-music-title">
+							<h6>LUCY DATE All time KESHA hits</h6>
+							<div class="pakka-btn-bay">
+								<div class="pakka-more1" ng-click="more.show()"></div>
+								<div class="pakka-dwn1"></div>
+								<div class="pakka-play1" ng-click="player.show()"></div>
+								<div class="clear-both"></div>
+							</div>
+						</div>
+						<div class="clear-both"></div>
+						</li>
+						<li>
+						<div class="pakka-music-album">
+							<img src="img/editor11.png">
+						</div>
+						<div class="pakka-music-title">
+							<h6>LUCY DATE All time KESHA hits</h6>
+							<div class="pakka-btn-bay">
+								<div class="pakka-more1" ng-click="more.show()"></div>
+								<div class="pakka-dwn1"></div>
+								<div class="pakka-play1" ng-click="player.show()"></div>
+								<div class="clear-both"></div>
+							</div>
+						</div>
+						<div class="clear-both"></div>
+						</li>
+						<li>
+						<div class="pakka-music-album">
+							<img src="img/editor11.png">
+						</div>
+						<div class="pakka-music-title">
+							<h6>LUCY DATE All time KESHA hits</h6>
+							<div class="pakka-btn-bay">
+								<div class="pakka-more1" ng-click="more.show()"></div>
+								<div class="pakka-dwn1"></div>
+								<div class="pakka-play1" ng-click="player.show()" ></div>
+								<div class="clear-both"></div>
+							</div>
+						</div>
+						<div class="clear-both"></div>
+						</li>
+						<li>
+						<div class="pakka-music-album">
+							<img src="img/editor11.png">
+						</div>
+						<div class="pakka-music-title">
+							<h6>LUCY DATE All time KESHA hits</h6>
+							<div class="pakka-btn-bay">
+								<div class="pakka-more1" ng-click="more.show()"></div>
+								<div class="pakka-dwn1"></div>
+								<div class="pakka-play1" ng-click="player.show()"></div>
+								<div class="clear-both"></div>
+							</div>
+						</div>
+						<div class="clear-both"></div>
+						</li>
+						<li>
+						<div class="pakka-music-album">
+							<img src="img/editor11.png">
+						</div>
+						<div class="pakka-music-title">
+							<h6>LUCY DATE All time KESHA hits</h6>
+							<div class="pakka-btn-bay">
+								<div class="pakka-more1" ng-click="more.show()"></div>
+								<div class="pakka-dwn1"></div>
+								<div class="pakka-play1" ng-click="player.show()"></div>
+								<div class="clear-both"></div>
+							</div>
+						</div>
+						<div class="clear-both"></div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</ion-content>
+	<div class="pakka-mini-player" ng-click="player.show()">
+		<h4>LIAR Kesha feat</h4>
+		<div class="pakka-mini-left">
+			<div class="pakka-mini-player-range">
+				<input type="range" name="distance">
+			</div>
+		</div>
+		<div class="pakka-mini-right">
+			<div class="pakka-mini-play">
+				<div class="pakka-play1 pos-abs" style="top: 10px;left: 34%;" ></div>
+				<img src="img/editor11.png">
+
+
+			</div>
+		</div>
+		<div class="clear-both"></div>
+	</div>
+</ion-view>

@@ -1,0 +1,37 @@
+<ion-modal-view hide-nav-bar="true" class="modal-player">
+
+  <ion-header-bar align-title="center" class="bar-color">
+    <button class="button button-clear button-icon icon ion-ios-close-empty" ng-click="closePlaylistModal()" id="button-color"></button>
+  	<h1 class="title">Передачиа</h1>
+    <button class="button button-clear fa fa-bluetooth-b bluetooth" id="bluetooth" ng-click="showBluetoothSettings()"></button>
+  </ion-header-bar>
+
+  <ion-content class="pakka-music-player-bg has-header" delegate-handle="playerModal">
+
+    <div class="container">
+      <img ng-src="{{playlistImage}}" class="playlist-image">
+
+      <div class="pause-button-border" ng-class="{'pause-button-border-on-tap': addBorderPause}" id="pause-button-border"></div>
+      <button class="button bottom-left button-player" ng-click="pauseOn = !pauseOn; playOn = !playOn; pauseButtonClick()" ng-hide="pauseOn" on-touch="onTouchPause()" on-release="onReleasePause()" on-hold="onHoldPause()" ng-class="{'add-border-class-pause': addBorderPause}"><i class="icon ion-pause"></i></button>
+
+      <div ng-class="{'play-button-border': pauseButtonTapped, 'play-button-border-on-tap': addBorderPlay}" id="play-button-border"></div>
+      <button class="button bottom-right button-player" ng-click="playOn = !playOn; pauseOn = !pauseOn; playButtonClick()" ng-hide="playOn" on-touch="onTouchPlay()" on-release="onReleasePlay()" on-hold="onHoldPlay()" ng-class="{'add-border-class-play': addBorderPlay}"><i class="icon ion-play"></i></button>
+    </div>
+
+    <br>
+
+    <ion-list class="list-index">
+      <ion-item ng-repeat="otherPlaylist in otherPlaylists | filter: '!'+lastOpenPlaylist" class="list-no-border">
+
+          <a class="item item-thumbnail-right" ng-click="openOtherPlaylist(otherPlaylist)">
+            <img ng-src="{{otherPlaylist.img}}">
+            <h2>{{otherPlaylist.name}}</h2>
+            <p>{{otherPlaylist.data}}</p>
+          </a>
+
+      </ion-item>
+    </ion-list>
+
+	 </ion-content>
+
+</ion-modal-view>

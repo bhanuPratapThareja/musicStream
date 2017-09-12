@@ -1,0 +1,28 @@
+{
+  "playlists" : [
+    {
+      "id": 1,
+      "name" : "britney",
+      "data" : "This is some data",
+      "img" : "img/topchart5.png"
+    },
+    {
+      "id": 2,
+      "name" : "someone",
+      "data" : "This is some data This is some data This is some data This is some data This is some data",
+      "img" : "img/topchart6.png"
+    },
+    {
+      "id": 3,
+      "name" : "someone other",
+      "data" : "This is some data This is some data This is some data",
+      "img" : "img/topchart7.png"
+    },
+    {
+      "id": 4,
+      "name" : "jlo",
+      "data" : "This is some data",
+      "img" : "img/topchart8.png"
+    }
+  ]
+}

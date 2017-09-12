@@ -1,0 +1,43 @@
+<ion-view hide-nav-bar="true" class="page-height">
+
+  <ion-header-bar align-title="center" class="bar-color">
+		<button class="ion-arrow-down-a button-clear down-arrow-button-padding" ng-click="showDropdown()" id="bluetooth"></button>
+  	<h1 class="title">Передачи</h1>
+    <button class="button button-clear fa fa-bluetooth-b bluetooth" id="bluetooth" ng-click="showBluetoothSettings()"></button>
+  </ion-header-bar>
+
+  <drop-down></drop-down>
+
+    <ion-content class="has-header" scrollbar-y="false" ng-click="contentClick()">
+
+      <div class="row" class="playlists-loading-spinner-div" ng-show="playlistsLoadingSpinner">
+        <div class="col text-center">
+          <ion-spinner class="playlists-loading-spinner" icon="{{platform == 'android' ? 'android' : 'dots'}}"></ion-spinner>
+        </div>
+      </div>
+
+      <most-played-playlists playlist="playedPlaylist" ng-hide="playlistsLoadingSpinner"></most-played-playlists>
+
+
+				<ion-list class="list-index">
+
+				  <ion-item ng-repeat="playlist in playlists track by playlist.id" class="list-no-border">
+
+            <a ng-click="openPlaylistModal(playlist)" id="foo">
+						  <div class="item item-image">
+						    <img ng-src="{{playlist.img}}">
+								<div class="pakka-topchart-overlay1">
+								</div>
+						  </div>
+							<div class="item item-text-wrap assertive">
+									{{playlist.data}}
+								</div>
+            </a>
+
+					</ion-item>
+
+
+				</ion-list>
+
+	</ion-content>
+</ion-view>

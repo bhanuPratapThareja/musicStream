@@ -1,0 +1,21 @@
+<ion-modal-view class="error-modal" ng-class="{oneErrorClass: onlyOneError, twoErrorClass: twoErrors}" on-swipe-up="hideErrorModalbySlideUP()">
+
+  <ion-content has-bouncing="false" scroll="false" scrollbar-y="false">
+
+    <div class="row padding-error-modal modal-vertical">
+      <div class="col text-center">
+        <p ng-if="isPhoneAndPasswordEmpty"><i class="error" aria-hidden="true"> Please Enter Phone Number and password</i></p>
+        <p ng-if="isPhoneEmpty"><i class="error" aria-hidden="true"> Please Enter Phone Number</i></p>
+        <p ng-if="isPhoneInvalid"><i class="error" aria-hidden="true"> Phone number must have 10 digits</i></p>
+
+        <p ng-if="isPasswordEmpty"><i class="error" aria-hidden="true"> Please Enter Password</i></p>
+        <p ng-if="isPasswordShort"><i class="error" aria-hidden="true"> Passwaord must contain atleast 4 characters</i></p>
+        <p ng-if="isPasswordInvalid"><i class="error" aria-hidden="true"> Password must contain 1 Capital letter, 1 small letter and 1 number</i></p>
+
+        <!-- <hr class="error-modal-hr"> -->
+
+      </div>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

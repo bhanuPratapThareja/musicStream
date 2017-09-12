@@ -1,0 +1,51 @@
+<ion-view hide-nav-bar="true" data-tap-disabled="true" class="page-height">
+
+  <ion-scroll  overflow-y="hidden" scroll="false" ng-class="'content-background'">
+
+    <div class="row padding-top">
+      <div class="col text-center padding-top">
+        <h3 class="text-white padding-top">регистрация</h3>
+      </div>
+    </div>
+
+    <form name="registrationForm" class="form-margin" ng-submit="register(registrationForm, regPhone, regPassword, repeatRegPassword)" novalidate>
+
+      <div class="list form-list">
+        <label class="item item-input form-inputs">
+          <span class="input-label-android">Phone</span>
+          <span class="seven-android">(+7) </span>
+          <input type="tel" name="regPhone" placeholder=" XXX-XXX-XXXX" class="phone-number-android text-input-field number-input-android" ng-model="regPhone" ng-model-options="{updateOn: 'keyup', allowInvalid: true}" ng-change="updatePhoneModel(registrationForm, regPhone)" mask=" 999-999-9999" clean="true" required>
+        </label>
+
+        <label class="item item-input form-inputs">
+          <span class="input-label-android">пароль</span>
+          <input type="text" name="regPassword" class="text-input-field number-input-android" ng-model="regPassword" ng-model-options="{updateOn: 'keyup', allowInvalid: true}" ng-change="updatePasswordModel(registrationForm, regPassword)" required>
+        </label>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col text-center">
+          <button type="submit" on-touch="onTouch()" on-release="onRelease()" id="buttonSignup" class="button button-light button-outline button-block form-main-button">Зарегистрироваться</button>
+        </div>
+      </div>
+
+    </form>
+
+    <div class="row">
+      <div class="col text-center">
+        <h4 class="text-white-light">Or login with</h4>
+      </div>
+    </div>
+
+    <o-auth></o-auth>
+
+    <div class="row">
+      <div class="col text-center">
+        <button class="button button-clear button-light icon-left ion-chevron-left" nav-transition="ios" nav-direction="back" ui-sref="signin"> &nbsp;&nbsp;Уже есть аккаунт?</button>
+      </div>
+    </div>
+
+  </ion-scroll>
+</ion-view>
